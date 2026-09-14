@@ -1,0 +1,7 @@
+CMP_DATA/
+CMP.zip
+*.pt
+*.npy
+venv/
+__pycache__/
+submission_out.csv

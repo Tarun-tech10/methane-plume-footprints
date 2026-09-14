@@ -61,7 +61,7 @@ If that prints a table with a GPU name, you are fine. Then:
 ```bat
 python -m venv venv
 venv\Scripts\activate
-pip install numpy pandas pillow
+pip install -r requirements.txt
 ```
 
 Now install torch — **the right build depends on how new the GPU is**:

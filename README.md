@@ -1,3 +1,23 @@
+# Confirmed Methane Plume Footprints
+
+From-scratch U-Net that decides whether a flagged methane enhancement survived
+review and, if so, outlines it. Scores **0.68** on the held-out split, against a
+reference convolutional segmentation network at 0.5761 and 0.0 for answering
+"no plume" everywhere.
+
+| file | what it is |
+|---|---|
+| `solution.py` | the entire pipeline, one self-contained file |
+| `description.md` | method, measurements, and what was tried and failed |
+| `submission.csv` | output of `solution.py` on the supplied test split |
+| `check_submission.py` | validates a submission against the format rules |
+| `requirements.txt` | numpy / pandas / pillow (torch installed separately, see below) |
+| `DATASET_LICENSE.txt`, `DATASET_ATTRIBUTION.txt` | CC0 1.0, Harvard Dataverse provenance |
+
+Run it with `python solution.py CMP_DATA submission.csv`. Details below.
+
+---
+
 # Running this on another laptop
 
 `solution.py` is one self-contained file. It imports nothing from this project — only
@@ -19,10 +39,14 @@ machine with no NVIDIA GPU it will fail immediately at the first `.to(DEV)` (see
 
 Apple Silicon / AMD / Intel integrated graphics will **not** work.
 
-## 2. Copy these two things across
+## 2. Get the dataset
 
-1. `CMP.zip` — the dataset, **1.0 GB** (USB stick, Drive, whatever is easiest)
-2. this `CMP_PORTABLE` folder — 26 KB
+The code is in this repo; the **dataset is not** (1.0 GB, too large for a git repo).
+Download `CMP.zip` from the [Releases tab](../../releases) and put it next to
+`solution.py`.
+
+If the Releases tab is empty the dataset has not been published yet — ask for
+`CMP.zip` directly. Nothing here runs without it.
 
 ## 3. Set up, once
 

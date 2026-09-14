@@ -1,0 +1,18 @@
+Source deposit
+--------------
+Plume Segmentation from MethaneSAT with Cross-Sensor Transfer Learning and Physics-Informed
+Postprocessing. Harvard Dataverse. doi:10.7910/DVN/FR959H
+
+Licence
+-------
+CC0 1.0 Universal (Public Domain Dedication). SPDX: CC0-1.0
+https://creativecommons.org/publicdomain/zero/1.0/
+Full legal code in LICENSE.txt.
+
+Changes made in this redistribution
+-----------------------------------
+Airborne MethaneAIR scenes only; satellite and simulated subsets excluded. Scenes without a flight
+identifier and scenes not exactly 672 x 672 excluded. Float arrays converted to 16-bit PNG under the
+global affine map ppb = 1000.0 + 0.1556 * code, with code 65535 reserved for a missing retrieval.
+Scene and flight identifiers replaced by opaque digests; original filenames, timestamps, coordinates
+and processing strings removed. Model archives and cross-validation fold files not included.

@@ -1,0 +1,9 @@
+numpy
+pandas
+pillow
+
+# torch is NOT listed here on purpose: the right wheel depends on the GPU.
+# RTX 50-series (Blackwell, sm_120):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+# RTX 20/30/40-series:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124
